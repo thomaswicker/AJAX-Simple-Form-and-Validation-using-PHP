@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AJAX form tutorial using jQuery and PHP</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="ajax_submit.js"></script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+    	
+        <h1>Give us your feedback</h1>
+        
+      <div id="inner-wrapper">
+          
+		<form id="feedback" action="feedback.php" enctype="multipart/form-data" method="post">
+          
+          	<div id="response"><!--This will hold our error messages and the response from the server. --></div>           
+            
+                <div class="inputs">
+                  <label>Name&nbsp;&nbsp;&nbsp;</label>         
+                  <input name="name" type="text" class="required" id="name" size="30" />           
+                </div>          
+            
+                <div class="inputs">
+                  <label>Email&nbsp;&nbsp;&nbsp;</label>            
+                  <input name="email" type="text" class="required" id="email" size="30" />           
+               </div>         
+            
+                <div class="inputs">
+                  <label>Message</label>         
+                  <textarea name="message" cols="25" rows="" class="required" id="message"></textarea>          
+                </div>                       
+                
+                <div class="button">
+                  <input type="submit" name="submit" id="submit" value="Submit" />
+                </div>
+                
+                <div class="inputs">
+                    <input type="hidden" name="honeypot" id="honeypot" value="http://" />            
+                    <input type="hidden" name="humancheck" id="humancheck" class="clear" value="" />
+                </div>
+        </form>
+        
+      </div><!-- End inner-wrapper -->
+                
+	</div><!-- End wrapper -->
+
+</body>
+</html>
