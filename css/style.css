@@ -1,0 +1,582 @@
+/*
+
+****** 
+******
+****** WELCOME DEVELOPERS!!! 
+****** I am pro open-source so please feel free to take what you need.
+******  
+****** Contact info@michaelbowlin.com if you'd like to share some techniques or if you just want to chat.
+****** Cheers! - M.B.
+****** 
+****** 
+
+*/
+@import url(http://fonts.googleapis.com/css?family=Meddon);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+Global Reset & Standards ---------------------- */
+    
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, font, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+  
+  * { margin: 0px;padding: 0px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  html { width:100%;width:100%;padding:0;margin:0;/*font-size: 62.5%;*/ }
+  body {
+    overflow-x: hidden;
+    margin:0;padding:0;
+    min-width: 100%;
+    height:100%;
+    line-height: 1; position: relative; 
+    -webkit-font-smoothing: antialiased; 
+    /* RES. TYPEFACE */
+    font-size:110%!important;line-height: 1.6875;
+}
+
+/*--------------------------------------------------------------
+Global styles
+-------------------------------------------------------------- */
+  em { font-style: italic;}
+  strong { font-weight: 600;/*font-weight: bold;*/}
+  .right {float: right;}
+  .left { float: left;}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {font-weight:900;letter-spacing:0px;margin: 1em 0 0.5em 0; }
+  
+  li,
+  li a { font-weight:600;letter-spacing:0px;margin: .1em 0 0.1em 0;  }
+  li { padding:10px 0;list-style-type:disc; }
+  
+  h1 { font-size: 2.1em;line-height:1.3em;}
+  h2 { font-size: 1.8em;line-height: 1.3em;}
+  h3 { font-size: 1.6em;line-height: 1.3em;}
+  h4 { font-size: 1.5em;line-height: 1.3em;}
+  h5 { font-size: 1.4em;line-height: 1.3em;}
+  h6 { font-size: 1.2em;line-height: 1.3em;}
+  p {  font-size: 1.2em !important;line-height: 1.3em !important;margin: 0 0 1em 0;letter-spacing:.1em;color:#0e7284 !important;  }
+  span { font-size: 1.0em !important;line-height: 1.3em;margin: 0 0 1em 0;letter-spacing:.1em;color:#0e7284 !important; }
+  
+  a:link,
+  a:visited {  text-decoration: underline;}
+  
+  a:hover,
+  a:focus { }
+  hr  {  }
+  li, li a, p, span { font-size:1.2em; }
+  
+  small { padding:20px;}
+  /* END Global Styles */
+    
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: none;
+}
+
+.center {
+    margin:0 auto !important;
+    padding:0 !important;
+    display:block !important;
+}
+
+header {
+  width: 100%;
+  height: 92px;
+  box-sizing: border-box;
+  background: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index:9999;
+  padding: 0px 0px 0px 0px;
+  border-bottom: solid #43CCCD 1px;
+}
+
+header h1 {
+  float: left;
+  margin: 8px 30px;
+  color: #43CCCD;color:rgba(33,201,198,1);
+  font-family: verdana,sans-serif;
+}
+
+header h1 span {
+  color:rgba(133,132,135,1);
+  color:#999;
+  margin:0 !important;
+  padding:0 0 0 3px !important;
+  letter-spacing:1px !important;
+}
+
+header h1 .jobtitle {
+  display:block;
+  font-size:14px !important;
+  font-weight:100;
+  color:#ccc;
+  color:rgba(133,132,135,.5);
+  margin:-2px 0 0 2px !important;
+  padding:0 !important;
+}
+
+header nav ul {
+  padding:0 !important;
+  height: auto !important;
+  width:262px !important;
+  float: right;
+}
+
+header nav ul li {
+  margin:0 !important;
+  height: auto;
+  display: inline-block;
+  
+}
+
+header nav ul li a {
+  min-height: 60px !important; 
+  display: block;
+  padding: 17px 20px;
+  color: white;
+  font-size: 2.2em;
+  text-decoration: none !important;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+  
+}
+
+header nav ul li a:hover{
+  color: #373948;
+}
+
+header nav ul li a.active{
+  min-height: 60px !important; 
+  border-bottom: none;
+}
+
+header nav ul li a.link-1,
+header nav ul li a.link-2,
+header nav ul li a.link-3 { 
+    background: #ccc; 
+    margin:1px 1px;
+}
+
+nav ul li a.active { background: #43CCCD;background:rgba(33,201,198,1);}
+
+
+
+section {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow: hidden;
+}
+
+article#about { background:#f7f7f7; margin-top: 70px;min-height:1200px;margin:0;padding:50px 10% 60px 10%;}
+article#skills { background:  #51778C url(/images/mountains.jpg)  70% -1px no-repeat;min-height:1200px;margin:0;padding:50px 10% 60px 10%; }
+article#contact { background:url(http://michaelbowlin.com/images/stripe4.png) repeat !important;min-height:1200px;margin:0;padding:50px 10% 60px 10%;}
+
+article#about h2, 
+article#skills h2,  
+article#contact h2 { 
+    color:#cccccc !important;
+}
+article#about a { 
+    text-decoration:none;
+    font-size:16px;
+    color:#0e7284 !important;
+} 
+article#about .span7 { 
+    padding:0 0 0 40px !Important;
+    
+}
+
+article#skills ul {
+    margin:0;
+    padding:0;
+    background:none !important;
+    width:200px !important;
+}
+
+article#skills li {
+    list-style-type:none;
+    padding:8px;
+    margin:0 0 0 10px;
+    border-left:solid #333333 2px;
+}
+
+
+#about #bioimg  {text-align:center;margin:40px 120px 60px 0;}
+#about #bioimg img {
+    max-height:360px;
+    transform: translate(0px, 2px) rotate(-3deg) scale(1);
+    -webkit-transform: translate(0px, 2px) rotate(-3deg) scale(1);
+    -moz-transform: translate(0px, 2px) rotate(-3deg) scale(1);
+    -ms-transform: translate(0px, 2px) rotate(-3deg) scale(1);
+    -o-transform: translate(0px, 2px) rotate(-3deg) scale(1);
+}
+
+
+/* Dropcap */
+.firstcharacter { 
+    float:left;
+    color: #43CCCD !important; 
+    font-size: 30px !important; 
+    line-height: 10px;
+    padding:24px 6px 10px 0px;
+
+}
+
+
+
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about h5,
+#about h6 {color:#43CCCD !important;}
+
+
+section h2 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3em; 
+  margin: 0px;
+}
+
+section .illustration {
+  width: 100%;
+  height: 240px;
+  border: 3px solid white;
+  background: url(http://placekitten.com/g/800/240) no-repeat;
+  margin-top: 15px;
+}
+
+section p {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em; 
+}
+
+/* */
+#maincontent {
+  margin:70px 0 0 0 !important;
+  
+  
+}
+
+
+/* Bootstap Custom */
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12 { }
+.row-fluid, 
+.container-fluid {
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.contact_form {
+    max-width:500px;
+    margin:0 0 0 -1px !important;
+    padding:0;
+    float:left;
+    
+}
+
+/* Form */
+#form_container {
+    position:relative;
+    background:#f3f3f3 !important;
+    width:500px;
+    height:auto;
+    padding:20px 0 40px 0 !important;
+    text-align:center;
+    float:none;
+    margin:0 auto;
+    overflow:hidden;
+    /* Border Radius */
+    border-radius:4px ;
+    -webkit-border-radius:4px ;
+    -moz-border-radius:4px ;
+    -ms-border-radius:4px ;
+    -o-border-radius:4px ;
+    /* Box Shadow */
+    box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -ms-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -o-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+}
+
+#contact #contactimg img {
+    
+    max-height:180px !important;
+    border:#fff solid 3px;
+    padding:5px;
+    margin:0px;
+    -webkit-box-shadow:0px 0px 10px -0px rgba(0,0,0,.15);
+    -moz-box-shadow:0px 0px 10px -0px rgba(0,0,0,.15);
+    -ms-box-shadow:0px 0px 10px -0px rgba(0,0,0,.15);
+    -o-box-shadow:0px 0px 10px -0px rgba(0,0,0,.15);
+    box-shadow:0px 0px 10px -0px rgba(0,0,0,.15);
+}
+#contact #contactimg {
+    padding:10px 0 ;
+    margin:0px;
+    background:#f9f9f9;
+    -webkit-transform: rotate(0deg);
+}
+
+#form_container ul {
+    margin:0;
+    padding:0;
+}
+#form_container #login h2 {
+    font-size:2.8em;
+    font-weight:400 !important;
+    color:#43CCCD !important; 
+}
+#form_container #login {
+ 
+}
+#form_container li {
+    margin:0 auto;
+    padding:0;
+    list-style-type:none;
+    width:363px;
+    height:auto;
+    padding:20px 0 0 0;
+    position:relative !important;
+
+}
+#form_container li label{
+      
+    display:block;
+    padding:10px 0;
+    /* Typeface */
+    background-color: transparent;
+    color:#CCCCCC !important; 
+    font-size:1.1em;
+    text-shadow: rgba(33,201,198,.3) 1.5px 1.5px 1px;
+    -moz-text-shadow: rgba(33,201,198,.3) 1.5px 1.5px 1px;
+    -webkit-text-shadow: rgba(33,201,198,.3) 1.5px 1.5px 1px;
+    -ms-text-shadow: rgba(33,201,198,.3) 1.5px 1.5px 1px;
+    -o-text-shadow: rgba(33,201,198,.3) 1.5px 1.5px 1px;
+    
+}
+
+#form_container li input{
+     
+    display:block;
+    height:36px;
+    width:330px !important;
+    padding:10px 0px 10px 24px !important;
+    margin:0 auto;
+}
+#form_container li textarea {
+    display:block;
+    height:96px;
+    width:330px !important;
+    padding:10px 0px 10px 24px !important;
+    margin:0 auto;
+}
+#form_container li:hover span {
+    background:#f3f3f3;
+    color:#00f;
+    display:block !important;
+    position:absolute;
+    top:10px;
+    left:100%;
+    z-index:1000;
+    padding:10px 20px;
+    width:100px;
+    /* Border Radius */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    /* Box Shadow */
+    box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -ms-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+    -o-box-shadow:4px 4px 3px 0px rgba(0,0,0,0.3);
+}
+#form_container li span {
+    display:none;
+
+}
+
+#form_container li button {
+    margin:6px 0 0 0;
+    padding:0;
+    height:51px;
+    width:334px;
+    font-size:1.2em;
+    color:#999 !important;
+    border: 1px #ccc solid;
+    border-radius:0 0 10px 10px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    /* Gradient */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 94%, #ededed 95%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(94%,#f3f3f3), color-stop(95%,#ededed), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 94%,#ededed 95%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f3f3f3 94%,#ededed 95%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f3f3f3 94%,#ededed 95%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 94%,#ededed 95%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#form_container li button:hover {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 6%, #ededed 7%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(6%,#f3f3f3), color-stop(7%,#ededed), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 6%,#ededed 7%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f3f3f3 6%,#ededed 7%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f3f3f3 6%,#ededed 7%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 6%,#ededed 7%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#form_container ul {
+    margin:20px 0 0 0;
+    padding:0;
+}
+
+
+
+       
+/* Form Placeholder css */
+:-moz-placeholder {
+    color: #ccc;
+}
+::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+/* Bootstrap */
+
+.nav-collapse {
+    
+}
+
+.navbar .btn-navbar {
+    margin:10px !Important;
+    height:60px !important;
+    width:60px !important;    
+}   
+
+.navbar .btn-navbar .icon-bar {
+    width:100% !important;
+}
+
+.navbar {
+
+  
+}
+
+.navbar-inner {
+  min-height: auto !important;
+  padding:0 !important;
+  margin:0 !important;
+
+}
+
+.navbar-inner .nav li {
+    padding:16px 0 0 0;
+    background:#CCCCCC !important;
+    height:84px; 
+    margin:1px 2px !important;
+}
+.navbar-inner .nav {
+    float:right !important;
+    width:237px;
+}
+ /* Media Queries */
+@media screen and (min-width:1px) and (max-width:980px){
+    
+    body {
+        padding:0 !important;
+        margin:0 !important;
+    }
+    article#skills ul {
+        background:rgba(255,255,255,.89) !important;
+        padding:5px 20px 20px 20px;
+        margin:20px 0 0 0 !important;
+    }
+
+    article#skills { 
+        padding:50px 10% 60px 5% !important;
+
+    }
+
+} 
+ 
+@media screen and (min-width:1px) and (max-width:530px){
+
+
+    header h1 {
+      font-size:16px !important;
+
+    }
+    
+    header h1 span {
+      font-size:16px !important;
+
+    }
+    
+    header h1 .jobtitle {
+      font-size:9px !important;
+    }
+    
+    .navbar .btn-navbar {
+        margin:10px !Important;
+        height:40px !important;
+        width:40px !important; 
+    }
+    .navbar .btn-navbar .icon-bar {
+        width:100% !important;
+        padding:0 !important;
+        margin:4px 0 !important;
+        background:#43CCCD !important;
+    }
+
+
+ }
+
+ 
